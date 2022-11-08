@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <title>Tic Tac Toe</title>
+    <link rel="icon" href="image/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-11 col-md-8 col-lg-5 col-xl-4" id="form">
+                <form class="p-3 border border-secondary rounded shadow p-3 bg-body rounded">
+                    <h1 class="text-center" style="font-size: 3.5rem;">Tic
+                        Tac Toe</h1>
+                    <div class="row mb-3">
+                        <label for="player1Name" class="col-sm-5 col-form-label d-flex gap-1"><span>Player
+                                1:</span><span class="material-symbols-sharp icon">
+                                close
+                            </span></label>
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" id="player1Name" name="player1Name">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="player2Name" class="col-sm-5 col-form-label d-flex gap-1"><span>Player
+                                2:</span><span class="material-symbols-sharp icon">
+                                circle
+                            </span></label>
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" id="player2Name" name="player2Name">
+                        </div>
+                    </div>
+                    <fieldset class="row mb-3">
+                        <legend class="col-form-label col-sm-3 pt-0">Game Mode:</legend>
+                        <div class="col-sm-10">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gameMode" id="pvp" value="pvp"
+                                    checked>
+                                <label class="form-check-label" for="pvp">
+                                    Player vs. Player
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gameMode" id="pve1" value="pve1">
+                                <label class="form-check-label" for="pve1">
+                                    Player vs Computer (Easy)
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gameMode" id="pve2" value="pve2">
+                                <label class="form-check-label" for="pve2">
+                                    Player vs Computer (Hard)
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-primary w-25">Play</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="tic-tac-toe">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-center">Tic Tac Toe</h1>
+                    <h2 class="text-center"></h2>
+                    <p class="text-center fs-1 m-0 mb-2">Your turn, Darryl!</p>
+                    <div class="d-flex justify-content-center gap-2 mb-5">
+                        <button class="btn btn-dark" id="resetButton">Reset Game</button>
+                        <button class="btn btn-dark" id="newGameButton">New Game</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="mb-5 board" id="#board">
+                        <div class="cell cell-0" id="0"></div>
+                        <div class="cell cell-1" id="1"></div>
+                        <div class="cell cell-2" id="2"></div>
+                        <div class="cell cell-3" id="3"></div>
+                        <div class="cell cell-4" id="4"></div>
+                        <div class="cell cell-5" id="5"></div>
+                        <div class="cell cell-6" id="6"></div>
+                        <div class="cell cell-7" id="7"></div>
+                        <div class="cell cell-8" id="8"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
+</body>
+
+
+</html>

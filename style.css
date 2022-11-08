@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'NineTsukiRegular';
+    src: url('./font/NineTsukiRegular.tff') format('truetype'),
+        url('./font/NineTsukiRegular.eot') format('embedded-opentype'),
+        url('./font/NineTsukiRegular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --cell-size: 150px;
+    --background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 45%, rgba(0, 212, 255, 1) 100%);
+}
+
+.switch-background {
+    --background: linear-gradient(180deg, rgba(0, 212, 255, 1) 0%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 1) 100%);
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background);
+    font-family: 'NineTsukiRegular', sans-serif;
+}
+
+#form {
+    position: absolute;
+    top: 25%;
+}
+
+form {
+    display: none;
+}
+
+form span {
+    font-size: 1.5rem;
+}
+
+form .icon {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border: 1px solid rgb(95, 95, 95);
+    font-size: calc(var(--cell-size)*0.9);
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+.not-allowed {
+    cursor: not-allowed;
+}
+
+.tic-tac-toe {
+    display: none;
+}
+
+@media (max-width:500px) {
+
+    :root {
+        --cell-size: 100px;
+    }
+
+    #form {
+        position: absolute;
+        top: 20%;
+    }
+
+
+}
+
+@media (max-width:450px) {
+
+    #form {
+        position: absolute;
+        top: 10%;
+    }
+
+
+}
