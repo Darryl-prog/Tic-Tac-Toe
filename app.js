@@ -59,6 +59,9 @@ const events = (function () {
     DOMElement.radioInputvsComputerHard.addEventListener('click', function () {
         DOMElement.player2Input.disabled = true;
         DOMElement.player2Input.value = 'Computer AI (Hard)';
+        if (DOMElement.player1Input.value.length) {
+            DOMElement.submitButton.disabled = false;
+        }
     })
 })();
 
